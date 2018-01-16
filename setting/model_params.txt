@@ -1,0 +1,62 @@
+#######################################################################
+#下列参数用于设置低频词和高频词的比例
+
+low_frequency_threshold=0.01
+high_frequency_threshold=0.7
+
+#######################################################################
+#下列参数用于设置LDA模型
+
+alpha=0.25
+beta=0.1
+ntopics=[5, 15, 20, 25, 30, 35, 40, 45, 50, 60, 80, 100, 150, 200]
+niters=20
+savestep=20
+twords=50
+
+#######################################################################
+#下列参数用于设置Dynamic Topic Model(DTM)
+
+# 'topics'为设定的主题数目
+topics=30
+
+# 'words'为每个主题下显示的词个数
+words=10
+
+# 'docs'为每个主题下显示的文档篇数
+docs=10
+
+#'time'代表按照年份进行的时间切分
+time=1
+
+#手动设置主题命名
+topic0=待命名
+topic1=待命名
+topic2=待命名
+topic3=待命名
+topic4=待命名
+topic5=待命名
+topic6=待命名
+topic7=待命名
+topic8=待命名
+topic9=待命名
+topic10=待命名
+topic11=待命名
+topic12=待命名
+topic13=待命名
+topic14=待命名
+topic15=待命名
+topic16=待命名
+topic17=待命名
+topic18=待命名
+topic19=待命名
+topic20=待命名
+topic21=待命名
+topic22=待命名
+topic23=待命名
+topic24=待命名
+topic25=待命名
+topic26=待命名
+topic27=待命名
+topic28=待命名
+topic29=待命名

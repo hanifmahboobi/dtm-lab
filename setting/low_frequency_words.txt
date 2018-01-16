@@ -1,4 +1,0 @@
-# This is a file for setting how to remove low frequency words:
-# the value of "low_frequency_threshold" represents that we want to remove the words which appears <= this number in documents.
-
-low_frequency_threshold=20
