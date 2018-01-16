@@ -213,7 +213,7 @@ def gen_ldac_corpus():
     # directory with document files
     dirname = "./cleaned_data/stage_4_out"
     # directory for results
-    outdir_name = "./db/"
+    outdir_name = "./models/db/"
     # prefix of the .dat and .vocab files
     basename = os.path.dirname(dirname).split('/')[-1]
     if not os.path.exists(outdir_name):
@@ -235,38 +235,6 @@ def gen_ldac_corpus():
     print("Blei's lda-c format input files generated.\n")
 
 
-if __name__=='__main__':
-
-    parser = init_parser()
-
-    #directory with document files
-    dirname = parser.dirname
-    dirname = dirname + os.sep if not dirname.endswith(os.sep) else dirname
-    #directory for results
-    outdir_name = parser.outdir if parser.outdir else dirname
-    outdir_name = outdir_name + os.sep if not outdir_name.endswith(os.sep) else outdir_name
-    #prefix of the .dat and .vocab files
-    basename = os.path.dirname(dirname).split('/')[-1]
-
-    if not os.path.exists(outdir_name):
-        os.mkdir(outdir_name)
-
-    #store configuration
-    config = dict()
-    config['datname'] = outdir_name + basename + '.dat'
-    config['vocabname'] = outdir_name + basename + '.vocab'
-    config['dmapname'] = outdir_name + basename + '.dmap'
-    config['minlength'] = parser.minlength
-    config['minoccurrence'] = parser.minoccurrence
-    if parser.stopword_file:
-        config['stopwords'] = load_stopwords(parser.stopword_file)
-    else:
-        config['stopwords'] = set()
-
-    fnames = get_filenames(dirname, parser.extension)
-    
-    try:
-        generate_dat_and_vocab_files(fnames, config)
-    except IOError as ioe:
-        print(ioe)
-        sys.exit(1)
+if __name__ == '__main__':
+    print("Test functions in 'text2ldac.py'.")
+    gen_ldac_corpus()

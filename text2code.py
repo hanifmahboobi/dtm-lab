@@ -24,6 +24,7 @@ def convert(filename, out_enc="utf-8"):
 
 
 def explore(dir):
+    print("Decoding and encoding all files to utf-8 format...")
     for root,dirs,files in os.walk(dir):
         for file in files:
             if os.path.splitext(file)[1]=='.txt':
